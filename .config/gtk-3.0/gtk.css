@@ -1,0 +1,152 @@
+#XfcePanelWindow {
+
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+} 
+
+
+
+/* panel rounded hover/active */
+
+.xfce4-panel button,
+.xfce4-panel button.flat,
+.xfce4-panel .panel-button,
+.xfce4-panel .xfce4-panel-button,
+.xfce4-panel .tasklist button,
+.xfce4-panel .launcher button {
+  border-radius: 10px;     /* rounded around icon */
+  margin: 2px;             /* stop highlight touching panel edge */
+  padding: 2px 6px;        /* make it hug content */
+  background-clip: padding-box;
+  border: none;
+  box-shadow: none;
+  background-image: none;  /* kill square theme gradients */
+}
+
+/* Hover/active/selected states ( tasklist buttons explicitly) */
+.xfce4-panel button:hover,
+.xfce4-panel button:active,
+.xfce4-panel button:checked,
+.xfce4-panel .tasklist button:hover,
+.xfce4-panel .tasklist button:active,
+.xfce4-panel .tasklist button:checked {
+  border-radius: 10px;
+  box-shadow: none;
+  background-image: none;
+  outline: none;
+}
+
+/* ===== Bring hover highlight back (theme-friendly), keep it rounded ===== */
+
+.xfce4-panel button:hover,
+.xfce4-panel button.flat:hover,
+.xfce4-panel .panel-button:hover,
+.xfce4-panel .xfce4-panel-button:hover,
+.xfce4-panel .tasklist button:hover,
+.xfce4-panel .launcher button:hover {
+  background-color: alpha(@theme_selected_bg_color, 0.22);
+}
+
+/* Active press */
+.xfce4-panel button:active,
+.xfce4-panel .tasklist button:active {
+  background-color: alpha(@theme_selected_bg_color, 0.30);
+}
+
+/* Selected/active window (tasklist “current app”) */
+.xfce4-panel button:checked,
+.xfce4-panel .tasklist button:checked {
+  background-color: alpha(@theme_selected_bg_color, 0.42);
+}
+
+/* Terminal padding */
+
+vte-terminal {
+  padding: 10px 8px;
+}
+
+/* Targets the calendar widget across the Xfce panel clocks */
+calendar, 
+calendar.view,
+GtkCalendar {
+    font-size: 9pt;
+    padding: 5px;
+}
+
+/* STYLE THE CURRENT/TODAY HIGHLIGHTED DAY */
+calendar:selected,
+GtkCalendar:selected {
+    background-color: #83a598; /* Changes the box color */
+    color: #ffff;            /* Changes the text color inside the box */
+    border-radius: 8px;
+
+}
+
+/* Header styling (Month and Year at the top) */
+calendar header {
+    font-weight: bold;
+}
+
+
+/* ===== Thunar (Gruvbox, libadwaita-inspired) ===== */
+
+/* sidebar: roomier rows, rounded warm selection pill */
+.shortcuts-pane {
+  background-color: @theme_bg_color;
+  padding: 8px 6px;
+}
+
+.shortcuts-pane treeview.view {
+  background-color: transparent;
+  -GtkTreeView-vertical-separator: 8;
+  -GtkTreeView-horizontal-separator: 6;
+}
+
+.shortcuts-pane treeview.view:selected,
+.shortcuts-pane treeview.view:selected:focus {
+  background-color: alpha(#fe8019, 0.20);
+  color: @theme_fg_color;
+  border-radius: 10px;
+}
+
+.shortcuts-pane treeview.view:hover {
+  background-color: alpha(#fbf1c7, 0.06);
+  border-radius: 10px;
+}
+
+/* path bar: rounded pills, active segment warm */
+.path-bar-button {
+  border-radius: 10px;
+  padding: 3px 10px;
+  margin: 2px 1px;
+  border-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+
+.path-bar-button:hover {
+  background-color: alpha(#fbf1c7, 0.08);
+}
+
+.path-bar-button:checked {
+  background-color: alpha(#fe8019, 0.20);
+  color: #fe8019;
+}
+
+/* file area: rounded selection, no hard edges */
+.standard-view:selected,
+.standard-view:selected:focus {
+  background-color: alpha(#fe8019, 0.28);
+  border-radius: 10px;
+}
+/* path-bar scroll pills (first/last button): no empty pill contours */
+.path-bar button:first-child,
+.path-bar button:last-child {
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+/* ===== end Thunar ===== */

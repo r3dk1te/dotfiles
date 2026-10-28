@@ -1,0 +1,9 @@
+/* XPM */
+static char * title_inactive = {
+"1 4 1 1",
+"#      c #504945 s inactive_title_4",
+"#",
+"#",
+"#",
+"#",
+};

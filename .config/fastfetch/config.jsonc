@@ -1,0 +1,61 @@
+// Gruvbox fastfetch: braille logo (from neofetch gas.txt), Hardware + Software sections.
+// Icons are Nerd Font glyphs as \uXXXX escapes. Colours are fixed 256-colour Gruvbox values.
+//   208 orange  214 yellow  142 green  108 aqua  109 blue  223 cream  245 gray  167 red
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "file-raw",
+    "source": "/home/USER/.config/fastfetch/gas-gradient.txt",
+    "padding": { "top": 2, "right": 3 }
+  },
+
+  "display": {
+    "separator": "  ",
+    "color": {
+      "separator": "38;5;245",
+      "output": "38;5;223"
+    },
+    "bar": {
+      "char": { "elapsed": "■", "total": "·" },
+      "width": 10
+    },
+    "percent": {
+      "type": 11,
+      "color": { "green": "38;5;142", "yellow": "38;5;214", "red": "38;5;167" }
+    }
+  },
+
+  "modules": [
+    "break",
+
+    // ── HARDWARE (yellow) ────────────────────────────────────────
+    { "type": "custom", "format": "\u001b[1;38;5;214m╭─   HARDWARE\u001b[0m" },
+    { "type": "host",    "keyColor": "38;5;214", "key": "│    Machine  ", "format": "{2}" },
+    { "type": "cpu",     "keyColor": "38;5;214", "key": "│    CPU      " },
+    { "type": "gpu",     "keyColor": "38;5;214", "key": "│    GPU      ", "format": "{2}" },
+    { "type": "memory",  "keyColor": "38;5;214", "key": "│    Memory   ", "format": "{percentage-bar} {used} / {total} ({percentage})" },
+    { "type": "swap",    "keyColor": "38;5;214", "key": "│    Swap     ", "format": "{percentage-bar} {used} / {total} ({percentage})" },
+    { "type": "disk",    "keyColor": "38;5;214", "key": "│    Disk     ", "folders": "/", "format": "{size-percentage-bar} {size-used} / {size-total} ({size-percentage})" },
+    { "type": "display", "keyColor": "38;5;214", "key": "│    Display  ", "format": "{1}x{2} @ {3}Hz" },
+    { "type": "battery", "keyColor": "38;5;214", "key": "│    Battery  ", "format": "{capacity-bar} {capacity}" },
+    { "type": "custom", "format": "\u001b[38;5;214m╰─\u001b[0m" },
+
+    // ── SOFTWARE (aqua) ──────────────────────────────────────────
+    { "type": "custom", "format": "\u001b[1;38;5;108m╭─   SOFTWARE\u001b[0m" },
+    { "type": "title",        "keyColor": "38;5;108", "key": "│    User     " },
+    { "type": "os",           "keyColor": "38;5;108", "key": "│    OS       ", "format": "{3}" },
+    { "type": "kernel",       "keyColor": "38;5;108", "key": "│    Kernel   " },
+    { "type": "uptime",       "keyColor": "38;5;108", "key": "│    Uptime   " },
+    { "type": "packages",     "keyColor": "38;5;108", "key": "│    Packages " },
+    { "type": "wm",           "keyColor": "38;5;108", "key": "│    WM       " },
+    { "type": "shell",        "keyColor": "38;5;108", "key": "│    Shell    " },
+    { "type": "terminal",     "keyColor": "38;5;108", "key": "│    Terminal " },
+    { "type": "localip",      "keyColor": "38;5;108", "key": "│    Local IP " },
+    { "type": "custom", "format": "\u001b[38;5;108m╰─\u001b[0m" },
+
+    "break",
+    { "type": "colors", "symbol": "circle", "paddingLeft": 2 },
+    "break"
+  ]
+}

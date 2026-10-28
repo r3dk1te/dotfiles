@@ -1,0 +1,9 @@
+/* XPM */
+static char * title_active = {
+"1 4 1 1",
+"#      c #8ec07c s active_title_2",
+"#",
+"#",
+"#",
+"#",
+};

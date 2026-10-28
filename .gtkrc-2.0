@@ -1,0 +1,2 @@
+include ".gtkrc-xfce"
+gtk-icon-theme-name="Gruvbox-Plus-Dark"

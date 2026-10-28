@@ -1,0 +1,9 @@
+/* XPM */
+static char * top_right_inactive = {
+"3 3 2 1",
+".      c none",
+"#      c #504945",
+"#..",
+"##.",
+"###",
+};

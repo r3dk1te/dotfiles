@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Sakura
+GenericName=Terminal
+Comment=Use the command line
+TryExec=sakura
+Exec=sakura -c 117 -r 34
+Icon=terminal-tango
+Type=Application
+Categories=GTK;Utility;TerminalEmulator;System;
+Keywords=terminal;
+StartupNotify=true
+X-Ubuntu-Gettext-Domain=sakura
+Path=
+Terminal=false
+X-XFCE-Source=file:///usr/share/applications/sakura.desktop
