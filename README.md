@@ -2,6 +2,20 @@
 
 Gruvbox rice for Linux Mint XFCE. Copy whatever you like.
 
+## Screenshots
+
+| fastfetch + tmux | btop + Thunar |
+|:---:|:---:|
+| ![fastfetch + tmux](screenshots/fastfetch-tmux.png) | ![btop + Thunar](screenshots/btop-thunar.png) |
+
+| Firefox + cmatrix | Whisker menu + terminal |
+|:---:|:---:|
+| ![Firefox + cmatrix](screenshots/firefox-cmatrix.png) | ![Whisker menu + terminal](screenshots/whisker-menu-terminal.png) |
+
+| Terminals + htop | Desktop + panel |
+|:---:|:---:|
+| ![Terminals + htop](screenshots/terminals-htop.png) | ![Desktop + panel](screenshots/desktop-panel.png) |
+
 | | |
 |---|---|
 | `.zshrc`, `.p10k.zsh` | zsh with [oh-my-zsh](https://ohmyz.sh), [powerlevel10k](https://github.com/romkatv/powerlevel10k), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) |
